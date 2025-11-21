@@ -25,10 +25,9 @@
 
 .ticker-content {
     display: flex;
-    animation: ticker 30s linear infinite;
+    animation: ticker 50s linear infinite;
     white-space: nowrap;
     padding-left: 150px;
-    /* Offset for label */
 }
 
 .ticker-item {
@@ -41,7 +40,16 @@
 
 .ticker-item span {
     color: var(--color-darker);
-    /* Bullet point or separator */
     margin-right: 10px;
     font-weight: 900;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
